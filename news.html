@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>News</title>
+        <!-- ...existing head... -->
+        <style>
+            /* 增大全站字体并设置默认字体族 */
+            body {
+                font-size: 18px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #333;
+            }
+
+            /* 调整：页面左右留 margin/padding，使内容不贴边 */
+            .news-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+                max-width: 1100px;
+                margin: 24px auto;
+                padding: 0 24px; /* 增大左右内边距，形成左右空白 */
+            }
+            .news-card {
+                background: #fff;
+                border: 1px solid #e6e6e6;
+                border-radius: 6px;
+                overflow: hidden;
+                text-align: center;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+                transition: transform .12s ease;
+            }
+            .news-card:hover { transform: translateY(-4px); }
+            .news-card img { width: 100%; height: 160px; object-fit: cover; display: block; }
+            /* 卡片标题左对齐并有左右内边距 */
+            .news-card .title { padding: 12px 16px; font-size: 1rem; color: #333; text-align: left; }
+            .news-card a { color: inherit; text-decoration: none; display: block; }
+
+            @media (max-width: 900px) { .news-grid { grid-template-columns: repeat(2, 1fr); } }
+            @media (max-width: 520px) { .news-grid { grid-template-columns: 1fr; } .news-card img { height: 120px; } }
+        </style>
+    </head>
+    <body>
+        <!-- 新增：页面最上方导航 (updated product link -> products.html) -->
+        <div class="topbar" style="background:#f5f5f5;padding:10px 50px;text-align:center;position:relative;">
+            <!-- 左侧 logo，文件名为 Logo.png（放在同一目录） -->
+            <img src="Logo.png" alt="Logo" style="height:40px;position:absolute;left:10px;top:50%;transform:translateY(-50%);">
+            <nav>
+                <a href="index.html">Home</a> |
+                <a href="news.html">News</a> |
+                <a href="products.html">Product</a> |
+                <a href="about.html">About us</a>
+            </nav>
+        </div>
+
+        <!-- 新增：新闻卡片网格（6 个卡片，分别链接到 newsA..newsF） -->
+        <div class="news-grid">
+            <a class="news-card" href="newsA.html">
+                <img src="newsA.jpeg" alt="Image A">
+                <div class="title">占位标题 A</div>
+            </a>
+            <a class="news-card" href="newsB.html">
+                <img src="https://via.placeholder.com/400x160?text=Image+B" alt="Image B">
+                <div class="title">占位标题 B</div>
+            </a>
+            <a class="news-card" href="newsC.html">
+                <img src="https://via.placeholder.com/400x160?text=Image+C" alt="Image C">
+                <div class="title">占位标题 C</div>
+            </a>
+            <a class="news-card" href="newsD.html">
+                <img src="https://via.placeholder.com/400x160?text=Image+D" alt="Image D">
+                <div class="title">占位标题 D</div>
+            </a>
+            <a class="news-card" href="newsE.html">
+                <img src="https://via.placeholder.com/400x160?text=Image+E" alt="Image E">
+                <div class="title">占位标题 E</div>
+            </a>
+            <a class="news-card" href="newsF.html">
+                <img src="https://via.placeholder.com/400x160?text=Image+F" alt="Image F">
+                <div class="title">占位标题 F</div>
+            </a>
+        </div>
+    </body>
+</html>

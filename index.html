@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Harm of ASMR</title>
+        <style>
+            /* 增大全站字体并设置默认字体族 */
+            body {
+                font-size: 18px; /* 调大字体 */
+                font-family: Arial, Helvetica, sans-serif;
+                color: #333;
+            }
+
+            /* 新增：居中占位文本样式，便于后续替换为简介 */
+            .introduction {
+                text-align: center;
+                margin: 40px auto;
+                font-size: 1.05rem;
+                color: #666;
+                max-width: 800px;
+            }
+
+            /* 新增：主内容的大 logo 样式 */
+            .big-logo img {
+                display: block;
+                margin: 20px auto;
+                height: 120px; /* 可根据需要调整大小 */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- added: top navigation (updated: add left logo) -->
+        <div class="topbar" style="background:#f5f5f5;padding:10px 50px;text-align:center;position:relative;">
+            <!-- 左侧 logo，文件名为 Logo.png（放在同一目录） -->
+            <img src="Logo.png" alt="Logo" style="height:40px;position:absolute;left:10px;top:50%;transform:translateY(-50%);">
+            <nav>
+                <a href="index.html">Home</a> |
+                <a href="news.html">News</a> |
+                <a href="products.html">Product</a> |
+                <a href="about.html">About us</a>
+            </nav>
+        </div>
+
+        <!-- 新增：主内容上方更大的居中 logo -->
+        <div class="big-logo">
+            <img src="Logo.png" alt="Main Logo">
+        </div>
+
+        <!-- 新增：居中占位文本 -->
+        <div class="introduction">占位符：在此添加简短介绍</div>
+
+        <!-- ...existing code... -->
+    </body>
+</html>
